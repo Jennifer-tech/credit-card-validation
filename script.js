@@ -1,13 +1,16 @@
 //visa card validation
-function validate_creditcardNo(visa_cardNo){
-    var visa_cardNo = prompt("Enter your card number");
+function validate_creditcardNo(){
+    let visa_cardNo = prompt("Enter your card number");
     const regEx = /^4[0-9]{12}(?:[0-9]{3})?$/;
-    if(visa_cardNo.value.match(regEx)){
+    if(visa_cardNo.match(regEx)){
+        alert("Visa card is valid")
         return true;
     }else{
         alert("card is invalid");
+        return false;
     }
 }
+validate_creditcardNo();
 
 /*for a visa card no, the following requirements are needed
 1) The string should not contain any special characters, alphabets or whitespaces
